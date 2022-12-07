@@ -41,13 +41,17 @@ function App() {
         />
       </div>
       <div className="flex flex-col items-center justify-center w-full h-screen">
-        <div className="border-b-2 border-gray-300 pb-5">
+        <div className="border-b-2 border-gray-200 pb-5">
           <Steps currentStep={currentStep} />
         </div>
 
-        <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
+        <form
+          onSubmit={(e) => changeStep(currentStep + 1, e)}
+          className="max-w-2xl"
+        >
           <div>
             {currentComponent}
+
             <div className="">
               {!isFirstStep && (
                 <button
@@ -64,7 +68,11 @@ function App() {
                   Concluir
                 </button>
               ) : (
-                <button type="submit" className="">
+                <button
+                  type="submit"
+                  className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-8 rounded
+                            focus:outline-none focus:shadow-outline transition-all"
+                >
                   Avançar
                 </button>
               )}
