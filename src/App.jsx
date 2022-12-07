@@ -52,11 +52,13 @@ function App() {
           <div>
             {currentComponent}
 
-            <div className="">
+            <div className="flex items-center gap-5">
               {!isFirstStep && (
                 <button
                   type="button"
-                  className=""
+                  className="border border-orange-500 hover:border-orange-700 font-bold py-2 px-8 rounded 
+                  text-orange-500 hover:text-orange-700
+                  focus:outline-none focus:shadow-outline transition-all"
                   onClick={() => changeStep(currentStep - 1)}
                 >
                   Voltar
@@ -64,7 +66,11 @@ function App() {
               )}
 
               {isLaststep ? (
-                <button type="submit" className="">
+                <button
+                  type="submit"
+                  className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-8 rounded
+                focus:outline-none focus:shadow-outline transition-all"
+                >
                   Concluir
                 </button>
               ) : (

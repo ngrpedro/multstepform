@@ -5,11 +5,14 @@ const ReviewForm = ({ data, handleUpdateFild }) => {
     <div>
       <div className="flex flex-col gap-4 max-w-md  m-auto my-5 ">
         <label className="flex flex-col items-start gap-1">
-          <span>Defina sua experiencia com a gente</span>
+          <span className="block text-gray-600 text-sm font-bold mb-1">
+            Defina sua experiencia com a gente
+          </span>
           <textarea
             rows={"5"}
             type="text"
-            className="border border-slate-500 p-2 rounded-md w-full"
+            className="shadow appearance-none border rounded-md w-full py-2 px-3 
+            text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={data.comment || " "}
             onChange={(e) => handleUpdateFild("comment", e.target.value)}
           />
