@@ -9,7 +9,7 @@ const Steps = ({ currentStep }) => {
             <span className="py-[10px] px-4 rounded-md bg-orange-500 text-white mr-3 block">
               1
             </span>
-            Sing Up
+            Infos
           </h1>
         </div>
         <div>
@@ -21,7 +21,7 @@ const Steps = ({ currentStep }) => {
             >
               2
             </span>
-            Tell Us
+            Diz ai!!
           </h1>
         </div>
         <div>
@@ -33,7 +33,19 @@ const Steps = ({ currentStep }) => {
             >
               3
             </span>
-            Tanks for that!
+            Confirmar
+          </h1>
+        </div>
+        <div>
+          <h1 className="font-bold text-md flex items-center justify-center">
+            <span
+              className={`py-[10px] px-4 rounded-md mr-3 border border-orange-500 block ${
+                currentStep >= 3 ? "bg-orange-500 text-white" : ""
+              }`}
+            >
+              4
+            </span>
+            PRONTO
           </h1>
         </div>
       </div>
@@ -65,6 +77,17 @@ const Steps = ({ currentStep }) => {
               }`}
             >
               3
+            </span>
+          </h1>
+        </div>
+        <div>
+          <h1 className="font-bold text-md flex items-center justify-center">
+            <span
+              className={`py-[10px] px-4 rounded-md mr-3 border border-orange-500 block ${
+                currentStep >= 3 ? "bg-orange-500 text-white" : ""
+              }`}
+            >
+              4
             </span>
           </h1>
         </div>

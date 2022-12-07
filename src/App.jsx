@@ -6,6 +6,7 @@ import ReviewForm from "./components/ReviewForm";
 import { useForm } from "./hooks/useForm";
 import Steps from "./components/Steps";
 import mainimage from "./assets/cool-background.png";
+import DoneStep from "./components/DoneStep";
 
 const formTemplate = {
   name: "",
@@ -26,10 +27,17 @@ function App() {
     <UserDetails data={data} handleUpdateFild={handleUpdateFild} />,
     <ReviewForm data={data} handleUpdateFild={handleUpdateFild} />,
     <Thanks data={data} handleUpdateFild={handleUpdateFild} />,
+    <DoneStep />,
   ];
 
-  const { currentStep, currentComponent, changeStep, isLaststep, isFirstStep } =
-    useForm(formComponents);
+  const {
+    currentStep,
+    currentComponent,
+    changeStep,
+    isLaststep,
+    isFirstStep,
+    isConfirmStep,
+  } = useForm(formComponents);
 
   return (
     <div className="flex items-center gap-10">
@@ -46,7 +54,7 @@ function App() {
         </div>
 
         <form onSubmit={(e) => changeStep(currentStep + 1, e)} className="">
-          <div className="w-[19rem] h-[19rem] md:w-[26rem]">
+          <div className="w-[19rem] h-[19rem] md:w-[26rem] m-auto">
             {currentComponent}
           </div>
 
@@ -63,14 +71,17 @@ function App() {
               </button>
             )}
 
-            {isLaststep ? (
+            {isConfirmStep && (
               <button
                 type="submit"
                 className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-8 rounded
-                focus:outline-none focus:shadow-outline transition-all"
+              focus:outline-none focus:shadow-outline transition-all"
               >
                 Concluir
               </button>
+            )}
+            {isLaststep != isConfirmStep ? (
+              ""
             ) : (
               <button
                 type="submit"

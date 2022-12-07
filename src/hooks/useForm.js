@@ -18,5 +18,6 @@ export const useForm = (steps) => {
     changeStep,
     isLaststep: currentStep + 1 === steps.length ? true : false,
     isFirstStep: currentStep === 0 ? true : false,
+    isConfirmStep: currentStep === 2 ? true : false,
   };
 };
