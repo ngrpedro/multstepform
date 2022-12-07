@@ -2,7 +2,7 @@ import React from "react";
 
 const UserDetails = ({ data, handleUpdateFild }) => {
   return (
-    <div className="flex flex-col gap-4 max-w-md  m-auto my-10">
+    <div className="flex flex-col gap-4 m-auto my-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <label className="flex flex-col items-start">
           <span className="block text-gray-600 text-sm font-bold mb-1">
