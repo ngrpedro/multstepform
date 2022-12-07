@@ -41,16 +41,16 @@ function App() {
         />
       </div>
       <div className="grid grid-cols-1 items-center justify-center gap-3 m-auto">
-        <div className="md:border-b-2 border-gray-200 pb-5">
+        <div className="md:border-b border-gray-200 pb-5">
           <Steps currentStep={currentStep} />
         </div>
 
         <form onSubmit={(e) => changeStep(currentStep + 1, e)} className="">
-          <div className="w-[19rem] h-[15rem] md:w-[26rem]">
+          <div className="w-[19rem] h-[19rem] md:w-[26rem]">
             {currentComponent}
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 border-t border-gray-300 py-5">
             {!isFirstStep && (
               <button
                 type="button"
